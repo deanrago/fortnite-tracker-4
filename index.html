@@ -1,0 +1,106 @@
+<!--======================================
+|                   Root                 |
+======================================= -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!--======================================
+|                   Head                 |
+======================================= -->
+<head>
+    <meta charset="UTF-8"> <!-- Defines the document type and version as HTML5 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
+    <title>I'm Bustin' It</title> <!-- Sets the page title that appears in the browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Links to the external CSS file, connecting this HTML to the styling in "style.css" -->
+</head>
+
+<!--======================================
+|                   Body                 |
+======================================= -->
+<body>
+<!----    Header    ---->
+    <header>
+        <h1>Fork Knife Stats</h1>
+<!----    NavBar    ---->
+        <nav>
+            <ul>
+                <li><a href="index.html">New</a></li>
+                <li><a href="performance.html">Performance</a></li>
+                <li><a href="session-list.html">List</a></li>
+                <li><a href="https://www.therecoveryvillage.com/crack-addiction/crack-hotline/">Cracked</a></li>
+            </ul>
+        </nav>
+    </header>
+<!--======================================
+|                   Form                 |
+======================================= -->
+    <main>
+    
+        <section id="stat-entry">
+            <h2>Enter Stats</h2>
+            <form id="statsForm">
+<!----    Game-Specific    ---->
+                <div class="form-group">
+                    <label for="gameId">Game ID:</label>
+                    <input type="text" id="gameId" required>
+                    
+                    <label for="placement">Placement:</label>
+                    <input type="number" id="placement" required>
+                </div>
+
+<!----    Player-Specific    ---->
+                <div class="form-group">
+                    <!-- Dropdown to select the player's gamertag. JavaScript uses this data -->
+                    <label for="gamertag">Gamertag:</label>
+                    <select id="gamertag" required>
+                        <option value="AFZ1219">Ariel (AFZ1219)</option>
+                        <option value="Lisan-Al-Gaib">Lisan-Al-Gaib (Lisan-Al-Gaib)</option>
+                    </select>
+
+                    <!-- Dropdown to select the landing zone. JavaScript records this stat -->
+                    <label for="landingZone">Landing Zone:</label>
+                    <select id="landingZone" required>
+                        <option value="Lone Lodge">Lone Lodge</option>
+                        <!-- Additional landing zones. JavaScript will store the selected zone -->
+                        <option value="Snobby Shoals">Snobby Shoals</option>
+                        <option value="Pleasant Park">Pleasant Park</option>
+                        <option value="Tilted Towers">Tilted Towers</option>
+                        <option value="Lil’ Loot Lake">Lil’ Loot Lake</option>
+                        <option value="Sandy Sheets">Sandy Sheets</option>
+                        <option value="Retail Row">Retail Row</option>
+                        <option value="Lazy Laps">Lazy Laps</option>
+                        <option value="Dusty Dicks">Dusty Dicks</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <!-- Input for kills (required field) -->
+                    <label for="kills">Kills:</label>
+                    <input type="number" id="kills" required>
+
+                    <!-- Input for assists (required field) -->
+                    <label for="assists">Assists:</label>
+                    <input type="number" id="assists" required>
+                </div>
+
+                <div class="form-group">
+                    <!-- Input for damage dealt to players (required field) -->
+                    <label for="damage">Damage to Players:</label>
+                    <input type="number" id="damage" required>
+                </div>
+
+                <!-- Submit button. JavaScript will listen for this button to trigger actions -->
+                <button type="submit">Submit Stats</button>
+            </form>
+        
+    </main>
+
+    <!-- Footer at the bottom of the page -->
+    <footer>
+        <p>&copy; 2024 Bustin' It Web Design</p>
+    </footer>
+
+    <!-- Links the external JavaScript file. This script runs once the HTML loads -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

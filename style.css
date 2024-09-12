@@ -1,0 +1,295 @@
+/* ========================================
+   |               General             |
+   ======================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e7dede;
+    color: #333;
+    line-height: 1.5;
+   
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden; /* Ensures no overflow */
+}
+
+/* ========================================
+   |               Header             |
+   ======================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #4caf50;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 3px solid #388e3c;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2rem;
+    max-width: 100%;
+    margin: 0;
+    color: #ffffff;
+    margin: 0 auto;
+}
+
+/* ========================================
+   |               Nav             |
+   ======================================== */
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   |               Main             |
+   ======================================== */
+
+main {
+    max-width: 85%;
+    margin: 0 auto 20px;
+    margin-top:0;
+    padding: 15px;
+    padding-top:0;
+    background-color: #ffffff;
+}
+
+/* ========================================
+   |               Heading 1             |
+   ======================================== */
+
+h2 {
+    margin-bottom: 15px;
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #388e3c;
+    background-color: #e7dede;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* ========================================
+   |               Key Stats             |
+   ======================================== */
+
+#akpg-header h2 {
+    margin-top: 0;
+}
+
+#akpg-header table {
+    margin: 0 auto;
+    border: none;
+}
+
+#akpg-header td {
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    font-size: 1rem;
+}
+
+#afz1219-akpg {
+    color: blue;
+    line-height: 2;
+}
+
+#lisan-akpg {
+    color: rgb(255, 35, 35);
+    line-height: 2;
+}
+
+.small-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+/* ========================================
+   |               Form             |
+   ======================================== */
+
+/* General */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+    margin-bottom: 3px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Fields & Dropdown */
+input, select, button {
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+}
+
+input, select {
+    background-color: #fafafa;
+    color: #4273e6;
+    text-align: start;
+}
+
+/* Submit button */
+button {
+    background-color: #4273e6;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    padding: 4px;
+    border: none;
+    width: 125px;
+    margin: 0 auto;
+}
+
+/* Submit button-hover effect */
+button:hover {
+    background-color: #3117d7;
+}
+
+/* ========================================
+   |               List             |
+   ======================================== */
+
+/* Separate History from Form */
+#game-stats {
+    margin-top: 10px;
+}
+
+/* Table title */
+caption {
+    font-size: 1.3rem;
+    margin-bottom: 3%;
+    text-align: start;
+}
+
+/* Tables general */
+table {
+    border-collapse: collapse;
+    margin-top: 2%;
+    width: 100%; /* Ensure the table takes up full width of the container */
+    table-layout: auto; /* Let table cells adjust based on their content */
+    table-layout:auto;
+}
+
+/* Ensure that the table fits within the screen width */
+table {
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+/* Tables header-row + data */
+th, td {
+    padding: 6px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    word-wrap: break-word;
+}
+
+/* Table header-row only */
+th {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+/* Media Queries for Small Screens (Mobile Portrait) */
+@media (max-width: 600px) {
+    /* Adjust main content width */
+    main {
+        max-width: 95%; /* Allow a bit more width for the table */
+    }
+
+    /* Resize table columns to fit on small screens */
+    table {
+        table-layout: fixed; /* Fix the layout to ensure all columns fit */
+        width: 100%; /* Take up full width */
+        overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    }
+
+    th, td {
+        font-size: 0.85rem; /* Reduce font size for small screens */
+        padding: 4px;
+    }
+
+    /* Reduce padding and margins for mobile */
+    header {
+        padding: 5px 0;
+    }
+
+    nav ul {
+        margin-top: 2%;
+        padding: 0 5px;
+    }
+
+    button {
+        width: 100px; /* Make the button smaller on mobile */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Reduce the heading size on small screens */
+    }
+}
+/* ========================================
+   |               Footer             |
+   ======================================== */
+
+footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: #126115;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
